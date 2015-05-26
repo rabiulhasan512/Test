@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
+            <!--%-5level means the level of the logging event should be left justified to a width of five characters-->
+            <!--%logger{36} will shorten the logger name within 36 characters, usually without significant loss of meaning-->
+        </layout>
+    </appender>
+
+    <logger name="com.ibcs.primax.javaee.web" level="DEBUG"/>
+    <logger name="com.ibcs.primax.javaee.service" level="INFO"/>
+
+
+    <root level="debug">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
